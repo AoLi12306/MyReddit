@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
     template: path.join(__dirname, "src/index.html"),
-    filename: "./index.html"
+    filename: "index.html"
 });
 const config = {
     entry: path.join(__dirname, "src/index.js"),
@@ -39,12 +39,9 @@ const config = {
       ]
     },
     plugins: [htmlWebpackPlugin],
-    resolve: {
-        extensions: [".js", ".jsx"]
-    },
     devServer:{
-        //inline:true,//实时刷新
-        port:7777,
+        inline:true,//实时刷新
+        port:7778,
         historyApiFallback: true,
         contentBase: './'
     }

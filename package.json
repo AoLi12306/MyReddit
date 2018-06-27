@@ -3,20 +3,16 @@
   "version": "1.0.0",
   "description": "this is a test project for build react project with npm command",
   "main": "dist/index.js",
-  "homepage": "https://aoli12306.github.io/MyReddit",
+  "homepage": "https://aoli12306.github.io/MyReddit/",
   "scripts": {
     "transpile": "babel src -d dist --copy-files",
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --hot",
     "build": "webpack --mode production",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
   "author": "David Li",
   "license": "ISC",
-  "peerDependencies": {
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1"
-  },
   "devDependencies": {
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",

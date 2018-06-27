@@ -12,7 +12,7 @@ npm install
 npm start
 
 open URL in broswer:
-http://localhost:7777/
+http://localhost:7778/MyReddit/
 
 
 -------------------------------------------------------------
