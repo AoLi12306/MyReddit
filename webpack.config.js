@@ -1,8 +1,13 @@
-var config = {
-    mode: 'production',
-    entry: __dirname + '/src/index.js',
+const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const htmlWebpackPlugin = new HtmlWebpackPlugin({
+    template: path.join(__dirname, "src/index.html"),
+    filename: "./index.html"
+});
+const config = {
+    entry: path.join(__dirname, "src/index.js"),
     output:{
-        path: __dirname + '/dist',
+        path: path.join(__dirname, "dist"),
         publicPath: '/',
         filename:'bundle.js',
     },
@@ -32,6 +37,10 @@ var config = {
             use: ["style-loader", "css-loader"]
           },
       ]
+    },
+    plugins: [htmlWebpackPlugin],
+    resolve: {
+        extensions: [".js", ".jsx"]
     },
     devServer:{
         //inline:true,//实时刷新
