@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "this is a test project for build react project with npm command",
   "main": "dist/index.js",
-  "homepage": "https://aoli12306.github.io/MyReddit/",
+  "homepage": "https://aoli12306.github.io/MyReddit",
   "scripts": {
     "transpile": "babel src -d dist --copy-files",
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
-    "deploy": "gh-pages -d dist",
-    "publish-demo": "npm run build && npm run deploy",
+    "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
   "author": "David Li",
